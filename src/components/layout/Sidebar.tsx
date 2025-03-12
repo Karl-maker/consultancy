@@ -2,8 +2,7 @@
 import { cn } from "@/lib/utils"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ScrollArea } from "@/components/ui/scroll-area"
-import { CodeSquare, Users, MessageSquare, Settings, BarChart } from "lucide-react"
+import { CodeSquare, Users, Settings } from "lucide-react"
 
 interface SidebarProps extends React.HTMLAttributes<HTMLDivElement> {}
 

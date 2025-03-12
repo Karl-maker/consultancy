@@ -46,11 +46,11 @@ export default function TeamsPage() {
             <CardContent className="p-8">
               <div className="flex flex-col md:flex-row items-center gap-8">
                 <Avatar className="h-32 w-32 ring-4 ring-primary/20">
-                  <AvatarImage src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Karl-Johan" />
+                  <AvatarImage src="https://media.licdn.com/dms/image/v2/D4E03AQEbq2NisTBtMg/profile-displayphoto-shrink_800_800/B4EZT2JLCmHMAk-/0/1739296387589?e=1747267200&v=beta&t=1ij2-2aPYlnB7L2dQTHjv69JUYVUzs_pccF8ZazQjfQ" alt="Karl-Johan Bailey" />
                   <AvatarFallback>KJ</AvatarFallback>
                 </Avatar>
                 <div className="flex-1">
-                  <h2 className="text-2xl font-bold mb-2">Karl-Johan</h2>
+                  <h2 className="text-2xl font-bold mb-2">Karl-Johan Bailey</h2>
                   <p className="text-lg font-semibold text-primary mb-2">CEO & Principal Consultant</p>
                   <p className="text-muted-foreground mb-4">
                     With over a decade of experience in software consultancy and team management, Karl-Johan has led numerous successful digital transformation projects and managed high-performing software teams across multiple industries. His expertise in strategic planning and technical leadership has helped companies scale their operations and innovate their digital presence.
