@@ -64,7 +64,7 @@ export default function ConsultationPage() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-9">
               {consultationFeatures.map((feature, index) => (
                 <Card key={index} className="bg-background/60 backdrop-blur-sm">
                   <CardHeader>
