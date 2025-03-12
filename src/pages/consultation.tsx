@@ -13,7 +13,7 @@ const consultationFeatures = [
   { icon: Package, title: "MVP Development", description: "Strategic planning for your minimum viable product" },
   { icon: Phone, title: "Mobile Solutions", description: "Native and cross-platform mobile application consulting" },
   { icon: Building2, title: "Enterprise Systems", description: "Large-scale enterprise software architecture and solutions" },
-  { icon: Users, title: "Digital Transformation", description: "Modern digital solutions for business optimization" }
+  // { icon: Users, title: "Digital Transformation", description: "Modern digital solutions for business optimization" }
 ]
 
 const processSteps = [
@@ -103,95 +103,96 @@ export default function ConsultationPage() {
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">Choose Your Consultation Package</h2>
             
             <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-              <Card className="relative border-2">
-                <CardHeader>
-                  <CardTitle className="text-2xl">Free Discovery Call</CardTitle>
-                  <CardDescription className="text-lg">30-minute strategic discussion</CardDescription>
-                  <div className="absolute top-6 right-6 text-2xl font-bold">
-                    $0
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-4">
-                    <li className="flex items-center gap-3">
-                      <CheckCircle2 className="h-5 w-5 text-primary" />
-                      <span>Initial project assessment</span>
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <CheckCircle2 className="h-5 w-5 text-primary" />
-                      <span>Basic technical recommendations</span>
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <CheckCircle2 className="h-5 w-5 text-primary" />
-                      <span>High-level solution discussion</span>
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <CheckCircle2 className="h-5 w-5 text-primary" />
-                      <span>Next steps planning</span>
-                    </li>
-                  </ul>
-                </CardContent>
-                <CardFooter>
-                  <Link href="/consultation/free" className="w-full">
-                    <Button className="w-full" size="lg">
-                      Schedule Free Call
-                    </Button>
-                  </Link>
-                </CardFooter>
-              </Card>
+            <Card className="relative border-2 flex flex-col h-full">
+              <CardHeader>
+                <CardTitle className="text-2xl">Free Discovery Call</CardTitle>
+                <CardDescription className="text-lg">30-minute strategic discussion</CardDescription>
+                <div className="absolute top-6 right-6 text-2xl font-bold">$0</div>
+              </CardHeader>
+              <CardContent className="flex-grow">
+                <ul className="space-y-4">
+                  <li className="flex items-center gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-primary" />
+                    <span>Initial project assessment</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-primary" />
+                    <span>Basic technical recommendations</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-primary" />
+                    <span>High-level solution discussion</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-primary" />
+                    <span>Next steps planning</span>
+                  </li>
+                </ul>
+              </CardContent>
+              <CardFooter className="mt-auto">
+                <Link href="/consultation/free" className="w-full">
+                  <Button className="w-full" size="lg">
+                    Schedule Free Call
+                  </Button>
+                </Link>
+              </CardFooter>
+            </Card>
 
-              <Card className="relative border-2 border-primary">
-                <div className="absolute -top-4 right-4 bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-medium">
-                  RECOMMENDED
-                </div>
-                <CardHeader>
-                  <CardTitle className="text-2xl">Premium Consultation</CardTitle>
-                  <CardDescription className="text-lg">1-hour comprehensive consultation</CardDescription>
-                  <div className="absolute top-6 right-6">
-                    <div className="text-2xl font-bold">$200 USD</div>
-                    <div className="text-sm text-muted-foreground">$1,400 TTD</div>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-4">
-                    <li className="flex items-center gap-3">
-                      <Clock className="h-5 w-5 text-primary" />
-                      <div>
-                        <h4 className="font-medium">Extended Session</h4>
-                        <p className="text-sm text-muted-foreground">Full hour of dedicated expert consultation</p>
-                      </div>
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <FileText className="h-5 w-5 text-primary" />
-                      <div>
-                        <h4 className="font-medium">Detailed Documentation</h4>
-                        <p className="text-sm text-muted-foreground">Comprehensive technical documentation and roadmap</p>
-                      </div>
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <Calendar className="h-5 w-5 text-primary" />
-                      <div>
-                        <h4 className="font-medium">2 Weeks Follow-up</h4>
-                        <p className="text-sm text-muted-foreground">Priority email support for 2 weeks</p>
-                      </div>
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <MessageSquare className="h-5 w-5 text-primary" />
-                      <div>
-                        <h4 className="font-medium">Client Portal Access</h4>
-                        <p className="text-sm text-muted-foreground">Exclusive access to our client support portal</p>
-                      </div>
-                    </li>
-                  </ul>
-                </CardContent>
-                <CardFooter>
-                  <Link href="/consultation/premium" className="w-full">
-                    <Button className="w-full" size="lg" variant="default">
-                      Book Premium Consultation
-                    </Button>
-                  </Link>
-                </CardFooter>
-              </Card>
+
+            <Card className="relative border-2 border-primary flex flex-col h-full">
+              <div className="absolute -top-4 right-4 bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-medium">
+                RECOMMENDED
+              </div>
+              <CardHeader>
+                <CardTitle className="text-2xl">Premium Consultation</CardTitle>
+                <CardDescription className="text-lg">1-hour comprehensive consultation</CardDescription>
+              </CardHeader>
+              {/* Move price section below header but keep it aligned to the right */}
+              <div className="absolute top-4 right-6 text-right">
+                <div className="text-2xl font-bold">$200 USD</div>
+                <div className="text-sm text-muted-foreground">$1,400 TTD</div>
+              </div>
+              <CardContent className="flex-grow">
+                <ul className="space-y-4">
+                  <li className="flex items-center gap-3">
+                    <Clock className="h-5 w-5 text-primary" />
+                    <div>
+                      <h4 className="font-medium">Extended Session</h4>
+                      <p className="text-sm text-muted-foreground">Full hour of dedicated expert consultation</p>
+                    </div>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <FileText className="h-5 w-5 text-primary" />
+                    <div>
+                      <h4 className="font-medium">Detailed Documentation</h4>
+                      <p className="text-sm text-muted-foreground">Comprehensive technical documentation and roadmap</p>
+                    </div>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <Calendar className="h-5 w-5 text-primary" />
+                    <div>
+                      <h4 className="font-medium">2 Weeks Follow-up</h4>
+                      <p className="text-sm text-muted-foreground">Priority email support for 2 weeks</p>
+                    </div>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <MessageSquare className="h-5 w-5 text-primary" />
+                    <div>
+                      <h4 className="font-medium">Client Portal Access</h4>
+                      <p className="text-sm text-muted-foreground">Exclusive access to our client support portal</p>
+                    </div>
+                  </li>
+                </ul>
+              </CardContent>
+              <CardFooter className="mt-auto">
+                <Link href="/consultation/premium" className="w-full">
+                  <Button className="w-full" size="lg" variant="default">
+                    Book Premium Consultation
+                  </Button>
+                </Link>
+              </CardFooter>
+            </Card>
+
             </div>
           </div>
         </section>
