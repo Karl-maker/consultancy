@@ -1,13 +1,66 @@
-
 import { Layout } from "@/components/layout/Layout"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
-import { Building, Mail, Phone, Clock, Globe, MapPin } from "lucide-react"
+import { Building, Mail, Phone, Clock, MapPin } from "lucide-react"
 import Head from "next/head"
+import { useForm } from "react-hook-form"
+import { zodResolver } from "@hookform/resolvers/zod"
+import * as z from "zod"
+import { ContactEmail } from "@/entities/contact.email"
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
+
+// const contactFormSchema = z.object({
+//   name: z.string().min(2, "Name must be at least 2 characters"),
+//   email: z.string().email("Please enter a valid email"),
+//   phone: z.string().min(10, "Please enter a valid phone number"),
+//   message: z.string().min(20, "Please provide more details in your message"),
+//   subject: z.string().min(5, "Please provide more details in your subject")
+// })
 
 export default function ContactPage() {
+  // const form = useForm<z.infer<typeof contactFormSchema>>({
+  //   resolver: zodResolver(contactFormSchema)
+  // })
+
+  // const onSubmit = async (data: z.infer<typeof contactFormSchema>) => {
+  //   const email: ContactEmail = {
+  //     template: "contact",
+  //     context: {
+  //       customer: {
+  //         name: data.name,
+  //         mobile: data.phone,
+  //         email: data.email,
+  //         message: data.message,
+  //         subject: data.subject,
+  //       }
+  //     },
+  //     to: 'support@karljohanbailey.com',
+  //     from: 'contact@karljohanbailey.com',
+  //     subject: 'Contact KJC',
+  //   }
+
+  //   try {
+  //     const response = await fetch("/api/send-email", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify(email),
+  //     })
+
+  //     const responseData = await response.json()
+
+  //     if (response.ok) {
+
+  //     } else {
+
+  //     }
+  //   } catch (error) {
+  //   }
+  // }
+
   return (
     <Layout>
       <Head>
@@ -81,27 +134,71 @@ export default function ContactPage() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <form className="space-y-4">
-                  <div className="grid gap-4">
-                    <div className="grid gap-2">
-                      <label htmlFor="name" className="text-sm font-medium">Name</label>
-                      <Input id="name" placeholder="Your name" />
-                    </div>
-                    <div className="grid gap-2">
-                      <label htmlFor="email" className="text-sm font-medium">Email</label>
-                      <Input id="email" type="email" placeholder="Your email" />
-                    </div>
-                    <div className="grid gap-2">
-                      <label htmlFor="subject" className="text-sm font-medium">Subject</label>
-                      <Input id="subject" placeholder="Message subject" />
-                    </div>
-                    <div className="grid gap-2">
-                      <label htmlFor="message" className="text-sm font-medium">Message</label>
-                      <Textarea id="message" placeholder="Your message" className="min-h-[150px]" />
-                    </div>
-                  </div>
-                  <Button type="submit" className="w-full">Send Message</Button>
-                </form>
+                {/* <Form {...form}>
+                  <form className="space-y-4" onSubmit={form.handleSubmit(onSubmit)}>
+                      <FormField
+                        control={form.control}
+                        name="name"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Full Name</FormLabel>
+                            <FormControl>
+                              <Input placeholder="John Doe" {...field} />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+
+                      <FormField
+                        control={form.control}
+                        name="email"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Email</FormLabel>
+                            <FormControl>
+                              <Input placeholder="john@example.com" type='email' {...field} />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+
+                      <FormField
+                        control={form.control}
+                        name="subject"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Subject</FormLabel>
+                            <FormControl>
+                              <Input placeholder="subject" {...field} />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+
+                      <FormField
+                        control={form.control}
+                        name="message"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Message</FormLabel>
+                            <FormControl>
+                            <Textarea 
+                              placeholder="Please describe your project requirements and what you'd like to discuss during the consultation"
+                              className="min-h-[120px]"
+                              {...field}
+                            />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                
+                    <Button type="submit" className="w-full">Send Message</Button>
+                  </form>
+                </Form> */}
               </CardContent>
             </Card>
           </div>
@@ -127,7 +224,6 @@ export default function ContactPage() {
                 </div>
               </CardContent>
             </Card>
-
           </div>
         </section>
 

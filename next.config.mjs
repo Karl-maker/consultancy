@@ -1,4 +1,3 @@
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -11,6 +10,15 @@ const nextConfig = {
       "giphy.com",
       "wikimedia.org"
     ]
+  },
+  webpack(config) {
+    // Adding a rule for .hbs files to be loaded as raw text
+    config.module.rules.push({
+      test: /\.hbs$/,
+      use: 'raw-loader', // 'raw-loader' will load .hbs files as strings
+    });
+
+    return config;
   }
 };
 

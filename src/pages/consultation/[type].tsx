@@ -10,6 +10,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import * as z from "zod"
 import { useRouter } from "next/router"
 import Head from "next/head"
+import { ContactEmail } from "@/entities/contact.email"
 
 const consultationFormSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -28,9 +29,42 @@ export default function ConsultationForm() {
     resolver: zodResolver(consultationFormSchema)
   })
 
-  const onSubmit = (data: z.infer<typeof consultationFormSchema>) => {
-    console.log(data)
-    // Handle form submission
+  const onSubmit = async (data: z.infer<typeof consultationFormSchema>) => {
+    const email: ContactEmail = {
+      template: "contact",
+      context: {
+        customer: {
+          name: `${data.name} ${data.company ? '- ' + data.company : ""}`,
+          mobile: data.phone,
+          email: data.email,
+          message: data.requirements,
+          subject: 'Consultation',
+        }
+      },
+      to: 'support@karljohanbailey.com',
+      from: 'contact@karljohanbailey.com',
+      subject: 'Contact KJC Consultation',
+    };
+
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(email),
+      });
+  
+      const data = await response.json();
+  
+      if (response.ok) {
+        
+      } else {
+        
+      }
+    } catch (error) {
+
+    }
   }
 
   return (
