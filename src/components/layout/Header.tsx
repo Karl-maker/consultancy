@@ -150,9 +150,11 @@ export const Header = () => {
         
         <div className="flex items-center gap-3">
           <ThemeToggle />
-          <Button className="hidden sm:inline-flex" variant="default">
-            Get Started
-          </Button>
+          <Link href='/consultation'>
+            <Button className="hidden sm:inline-flex" variant="default">
+              Get Started
+            </Button>
+          </Link>
         </div>
       </div>
     </header>

@@ -135,8 +135,9 @@ export default function ConsultationForm() {
                     </p>
                     <div className="text-sm">
                       <p>Amount: $200 USD / $1,400 TTD</p>
-                      <p>Bank: First Caribbean International Bank</p>
-                      <p>Account Number: XXXX-XXXX-XXXX-XXXX</p>
+                      <p>Bank: Republic Bank Limited</p>
+                      <p>USD Account Number: 0800-3970-8931 (SAV)</p>
+                      <p>TTD Account Number: 0800-2491-9501 (CHQ)</p>
                       <p>Reference: Your Name - Consultation</p>
                     </div>
                   </div>
