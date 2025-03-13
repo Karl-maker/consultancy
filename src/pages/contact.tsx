@@ -125,7 +125,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div>
+          {/* <div>
             <Card>
               <CardHeader>
                 <CardTitle>Send Us a Message</CardTitle>
@@ -134,7 +134,7 @@ export default function ContactPage() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                {/* <Form {...form}>
+                <Form {...form}>
                   <form className="space-y-4" onSubmit={form.handleSubmit(onSubmit)}>
                       <FormField
                         control={form.control}
@@ -198,10 +198,10 @@ export default function ContactPage() {
                 
                     <Button type="submit" className="w-full">Send Message</Button>
                   </form>
-                </Form> */}
+                </Form>
               </CardContent>
             </Card>
-          </div>
+          </div> */}
         </div>
 
         <section className="mb-16">

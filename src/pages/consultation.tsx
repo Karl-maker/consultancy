@@ -138,20 +138,24 @@ export default function ConsultationPage() {
               </CardFooter>
             </Card>
 
-
             <Card className="relative border-2 border-primary flex flex-col h-full">
               <div className="absolute -top-4 right-4 bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-medium">
                 RECOMMENDED
               </div>
-              <CardHeader>
-                <CardTitle className="text-2xl">Premium Consultation</CardTitle>
-                <CardDescription className="text-lg">1-hour comprehensive consultation</CardDescription>
+              
+              {/* Updated layout to avoid overlap on mobile */}
+              <CardHeader className="pb-6 flex flex-col sm:flex-row sm:justify-between sm:items-center">
+                <div>
+                  <CardTitle className="text-2xl">Premium Consultation</CardTitle>
+                  <CardDescription className="text-lg">1-hour comprehensive consultation</CardDescription>
+                </div>
+                {/* Ensure the price wraps properly on small screens */}
+                <div className="mt-2 sm:mt-0 text-right">
+                  <div className="text-2xl font-bold whitespace-nowrap">$200 USD</div>
+                  <div className="text-sm text-muted-foreground whitespace-nowrap">$1,400 TTD</div>
+                </div>
               </CardHeader>
-              {/* Move price section below header but keep it aligned to the right */}
-              <div className="absolute top-4 right-6 text-right">
-                <div className="text-2xl font-bold">$200 USD</div>
-                <div className="text-sm text-muted-foreground">$1,400 TTD</div>
-              </div>
+
               <CardContent className="flex-grow">
                 <ul className="space-y-4">
                   <li className="flex items-center gap-3">
@@ -184,6 +188,7 @@ export default function ConsultationPage() {
                   </li>
                 </ul>
               </CardContent>
+
               <CardFooter className="mt-auto">
                 <Link href="/consultation/premium" className="w-full">
                   <Button className="w-full" size="lg" variant="default">
@@ -192,6 +197,7 @@ export default function ConsultationPage() {
                 </Link>
               </CardFooter>
             </Card>
+
 
             </div>
           </div>
