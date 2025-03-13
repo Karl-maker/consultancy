@@ -20,7 +20,7 @@ export const Footer = () => {
                 <Twitter className="h-5 w-5" />
                 <span className="sr-only">Twitter</span>
               </Link>
-              <Link href="https://linkedin.com" className="text-muted-foreground hover:text-primary transition-colors">
+              <Link href="https://www.linkedin.com/in/karl-johan-bailey-a96481201/" className="text-muted-foreground hover:text-primary transition-colors">
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
@@ -92,19 +92,19 @@ export const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start gap-2 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                <span>123 Business Avenue, Stockholm, Sweden</span>
+                <span>Port of Spain, Trinidad and Tobago</span>
               </li>
               <li className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Phone className="h-4 w-4 flex-shrink-0" />
-                <span>+46 123 456 789</span>
+                <span>+1 (868) 742-2549</span>
               </li>
               <li className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Mail className="h-4 w-4 flex-shrink-0" />
-                <span>contact@kjc-consultancy.com</span>
+                <span>contact@karljohanbailey.com</span>
               </li>
               <li className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Globe2 className="h-4 w-4 flex-shrink-0" />
-                <span>www.kjc-consultancy.com</span>
+                <span>www.karljohanbailey.com</span>
               </li>
             </ul>
           </div>

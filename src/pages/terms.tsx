@@ -191,7 +191,7 @@ export default function TermsOfService() {
               </p>
               <div className="mt-4">
                 <p className="font-medium">KJC Consultancy</p>
-                <p className="text-muted-foreground">Email: legal@kjc-consultancy.com</p>
+                <p className="text-muted-foreground">Email: legal@karljohanbailey.com</p>
                 <p className="text-muted-foreground">Phone: +1 (555) 123-4567</p>
               </div>
             </CardContent>

@@ -34,9 +34,9 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-medium mb-1">Email</h3>
                       <p className="text-sm text-muted-foreground mb-1">General Inquiries:</p>
-                      <p className="text-sm">contact@kjc-consultancy.com</p>
+                      <p className="text-sm">contact@karljohanbailey.com</p>
                       <p className="text-sm text-muted-foreground mb-1 mt-2">Support:</p>
-                      <p className="text-sm">support@kjc-consultancy.com</p>
+                      <p className="text-sm">support@karljohanbailey.com</p>
                     </div>
                   </div>
                 </CardContent>
@@ -49,9 +49,7 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-medium mb-1">Phone</h3>
                       <p className="text-sm text-muted-foreground mb-1">Main Office:</p>
-                      <p className="text-sm">+1 (555) 123-4567</p>
-                      <p className="text-sm text-muted-foreground mb-1 mt-2">Support Line:</p>
-                      <p className="text-sm">+1 (555) 123-4568</p>
+                      <p className="text-sm">+1 (868) 742-2549</p>
                     </div>
                   </div>
                 </CardContent>
@@ -115,33 +113,13 @@ export default function ContactPage() {
             <Card>
               <CardHeader>
                 <Building className="h-6 w-6 mb-2 text-primary" />
-                <CardTitle>North America</CardTitle>
+                <CardTitle>Caribbean</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-2">
                   <div className="flex items-start space-x-2">
                     <MapPin className="h-4 w-4 text-muted-foreground mt-1" />
                     <div>
-                      <p className="text-sm">123 Tech Avenue</p>
-                      <p className="text-sm">San Francisco, CA 94105</p>
-                      <p className="text-sm">United States</p>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <Building className="h-6 w-6 mb-2 text-primary" />
-                <CardTitle>Caribbean Office</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-2">
-                  <div className="flex items-start space-x-2">
-                    <MapPin className="h-4 w-4 text-muted-foreground mt-1" />
-                    <div>
-                      <p className="text-sm">45 Innovation Drive</p>
                       <p className="text-sm">Port of Spain</p>
                       <p className="text-sm">Trinidad and Tobago</p>
                     </div>
@@ -150,24 +128,6 @@ export default function ContactPage() {
               </CardContent>
             </Card>
 
-            <Card>
-              <CardHeader>
-                <Building className="h-6 w-6 mb-2 text-primary" />
-                <CardTitle>East Coast Office</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-2">
-                  <div className="flex items-start space-x-2">
-                    <MapPin className="h-4 w-4 text-muted-foreground mt-1" />
-                    <div>
-                      <p className="text-sm">789 Financial District</p>
-                      <p className="text-sm">New York, NY 10004</p>
-                      <p className="text-sm">United States</p>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
           </div>
         </section>
 
