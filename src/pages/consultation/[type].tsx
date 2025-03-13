@@ -58,12 +58,12 @@ export default function ConsultationForm() {
       const data = await response.json();
   
       if (response.ok) {
-        
+        router.reload()
       } else {
-        
+        router.reload()
       }
     } catch (error) {
-
+      router.reload()
     }
   }
 
